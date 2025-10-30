@@ -1,4 +1,6 @@
+import Navbar from "@/components/navbar";
 import "./globals.css";
+import { LightRays } from "@/components/ui/light-rays";
 
 export default function RootLayout({
   children,
@@ -7,7 +9,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="dark">
+        <LightRays />
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
