@@ -9,8 +9,6 @@ export default function LenisScroll() {
       duration: 1.2, // scroll easing duration
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // exponential ease-out
       smoothWheel: true,
-      smoothTouch: false, // optional, keep native on touch devices
-      direction: "vertical",
     });
 
     function raf(time: number) {
