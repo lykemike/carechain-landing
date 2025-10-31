@@ -11,6 +11,7 @@ import {
   Building2,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 type FeatureItem = {
   id: string;
@@ -31,7 +32,7 @@ const FEATURES: FeatureItem[] = [
     id: "secure-on-chain-verification",
     title: "On-Chain Verification",
     description:
-      "Each medical record is permanently verifiable on Solana’s blockchain, ensuring authenticity, tamper resistance, and transparent auditability.",
+      "Each medical record is permanently verifiable on Solana's blockchain, ensuring authenticity, tamper resistance, and transparent auditability.",
     Icon: Lock,
   },
   {
@@ -122,8 +123,11 @@ export default function Home() {
         </div>
         <div className="flex gap-x-5 max-w-md min-w-md">
           <Button variant={"outline"} className="flex-1">
-            Request Access
+            <Link href="https://carechain-portal-six.vercel.app">
+              Request Access
+            </Link>
           </Button>
+
           <Button variant={"outline"} className="flex-1">
             Learn More
           </Button>
